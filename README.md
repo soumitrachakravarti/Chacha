@@ -1,16 +1,13 @@
-# chacha
+# ChaCha
 
-A new Flutter project.
+ChaCha is a tea kiosk serving retail and corporate spaces.
 
-## Getting Started
+# Our Story
 
-This project is a starting point for a Flutter application.
+Before we start our story, let’s talk about Pavan.Pavan was a college student who sold chai & snacks with his father outside our workplace. Everyday he would hear us ranting about work, life & our ambitions but the second he handed us a cup of chai, all our troubles disappeared.
 
-A few resources to get you started if this is your first Flutter project:
+Pavan was our inspiration. We wanted to be like him, a person who would serve us the cure to our repetitive lifestyle. A drink to help us forget. A drink, called Cha Cha.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+For more details you please visit https://thechacha.in
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### ChaCha 2019 ©
