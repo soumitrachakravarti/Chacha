@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
             ),
             child: ListView(
               primary: false,
-              padding: EdgeInsets.only(top: 34.0),
+              // padding: EdgeInsets.only(top: 34.0),
               children: <Widget>[
                 Padding(
                   padding: EdgeInsets.only(top: 34.0),
@@ -52,8 +52,8 @@ class _HomePageState extends State<HomePage> {
                       children: <Widget>[
                         _buildChaiItem('assets/black.png', 'Black', '₹30'),
                         _buildChaiItem('assets/classic.png', 'Classic', '₹30'),
-                        _buildChaiItem('assets/ginger.png', 'Ginger', '₹30'),
-                        _buildChaiItem('assets/cardamom.png', 'Cardamom', '₹30'),
+                        _buildChaiItem('assets/ginger.png', 'Ginger', '₹30', 2, true),
+                        _buildChaiItem('assets/cardamom.png', 'Cardamom', '₹30', 1, true),
                         _buildChaiItem('assets/cinnamon.png', 'Cinnamon', '₹30'),
                         _buildChaiItem('assets/mint.png', 'Mint', '₹30'),
                         _buildChaiItem('assets/turmeric.png', 'Turmeric', '₹30'),
@@ -67,10 +67,17 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {},
+        label: Text('3'),
+        icon: Icon(Icons.shopping_cart),
+        backgroundColor: Color(0xFF212721),
+        elevation: 0.0,
+      ),
     );
   }
 
-  Widget _buildChaiItem(String imgPath, String chaiName, String price) {
+  Widget _buildChaiItem(String imgPath, String chaiName, String price, [int quantity, bool show = false]) {
     return Padding(
         padding: EdgeInsets.only(left: 34.0, right: 34.0, top: 13.0),
         child: InkWell(
@@ -96,16 +103,30 @@ class _HomePageState extends State<HomePage> {
                         Text(chaiName,
                             style: TextStyle(
                                 fontSize: 21.0,
-                                fontWeight: FontWeight.bold)),
+                                fontWeight: FontWeight.bold,
+                                color: Color(0xFF212721))),
                         Text(price,
                             style: TextStyle(
                                 fontSize: 21.0,
-                                color: Colors.white))
+                                fontWeight: FontWeight.bold,
+                                color: Color(0xFF212721))
+                                ),
+                        Visibility(
+                          visible: show,
+                          child: Text(
+                            'x $quantity',
+                            style: TextStyle(
+                              fontSize: 13.0,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF212721),
+                            ),
+                          ),
+                        ),
                       ])
                 ])),
                 IconButton(
                     icon: Icon(Icons.add),
-                    color: Colors.black,
+                    color: Color(0xFF212721),
                     onPressed: () {})
               ],
             )));
