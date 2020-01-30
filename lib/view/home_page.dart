@@ -30,15 +30,15 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           SizedBox(
-            height: 21.0,
+            height: 32.0,
           ),
           Container(
-            height: MediaQuery.of(context).size.height - 144,
+            height: MediaQuery.of(context).size.height - 128,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(55.0),
-                  topRight: Radius.circular(55.0)),
+                  topLeft: Radius.circular(100.0),
+                  topRight: Radius.circular(0.0)),
             ),
             child: ListView(
               primary: false,
@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
                 Padding(
                   padding: EdgeInsets.only(top: 34.0),
                   child: Container(
-                    height: MediaQuery.of(context).size.height - 233,
+                    height: MediaQuery.of(context).size.height - 128,
                     child: ListView(
                       children: <Widget>[
                         _buildChaiItem('assets/black.png', 'Black', '₹30'),
@@ -94,20 +94,20 @@ class _HomePageState extends State<HomePage> {
                       child: Image(
                           image: AssetImage(imgPath),
                           fit: BoxFit.cover,
-                          height: 144.0,
-                          width: 144.0)),
-                  SizedBox(width: 21.0),
+                          height: 100.0,
+                          width: 100.0)),
+                  SizedBox(width: 10.0),
                   Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(chaiName,
                             style: TextStyle(
-                                fontSize: 21.0,
+                                fontSize: 20.0,
                                 fontWeight: FontWeight.bold,
                                 color: Color(0xFF212721))),
                         Text(price,
                             style: TextStyle(
-                                fontSize: 21.0,
+                                fontSize: 20.0,
                                 fontWeight: FontWeight.bold,
                                 color: Color(0xFF212721))
                                 ),
